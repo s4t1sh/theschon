@@ -230,6 +230,19 @@
 			font-family: 'magazineNormal' !important;
 			text-align: center;
 		}
+
+		@media (max-width: 768px) {
+            /* Media query for screens smaller than 768px (typical mobile screens) */
+            .image-row {
+                flex-direction: column; /* Stack columns in a single column */
+                align-items: center; /* Center items in the cross axis */
+            }
+
+            .image-column {
+                margin-right: 0; /* Remove right margin for each column */
+                margin-bottom: 20px; /* Add bottom margin to separate columns */
+            }
+        }
 	</style>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
