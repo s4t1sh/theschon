@@ -141,11 +141,7 @@
 			word-spacing: 5px;
 		}
 
-		.responsiveGallery-item p{
-			margin: 25px 0px;
-			font-size: 18px;
-			font-family: 'magazineNormal' !important;
-		}
+		
 
 		.modal {
 				display: none;
@@ -201,6 +197,35 @@
 			color: black;
 		}
 
+		}
+
+		.image-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .image-column {
+            flex: 1;
+            margin-right: 50px;
+        }
+
+        .image-column:last-child {
+            margin-right: 0;
+        }
+
+        .image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+		.image-column p{
+			margin: 25px 0px;
+			font-size: 22px;
+			font-family: 'magazineNormal' !important;
+			text-align: center;
 		}
 	</style>
 <!-- Google Tag Manager -->
@@ -414,7 +439,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						is always a Priority</h2>
 				</div>
 
-				<div class="container text-center">
+				<div class="image-row">
+					<div class="image-column">
+						<img class="image" src="images/update/Rectangle 77door3.png" alt="Image 1">
+						<p>ULTRA-SLIM SLIDING</p>
+						<div class="text-center">
+							<button class="button button1" id="enquireButton2">ENQUIRE NOW</button>
+						</div>
+					
+					</div>
+					<div class="image-column">
+						<img class="image" src="images/update/Rectangle 81door5.png" alt="Image 2">
+						<p>BI-FOLD DOORS</p>
+						<div class="text-center">
+							<button class="button button1" id="enquireButton3">ENQUIRE NOW</button>
+						</div>
+					</div>
+					<div class="image-column">
+						<img class="image" src="images/update/Rectangle 79door6.png" alt="Image 3">
+						<p>SOLID DOORS</p>
+						<div class="text-center">
+							<button class="button button1" id="enquireButton4">ENQUIRE NOW</button>
+							</div>
+					</div>
+					<div class="image-column">
+						<img class="image" src="images/update/Rectangle 80door7.png" alt="Image 4">
+						<p>DECORATIVE DOORS</p>
+						<div class="text-center">
+							<button class="button button1" id="enquireButton5">ENQUIRE NOW</button>
+							</div>
+					</div>
+					<div class="image-column">
+						<img class="image" src="images/update/Rectangle 78door4.png" alt="Image 5">
+						<p>16 SERIES</p>
+						<div class="text-center">
+							<button class="button button1" id="enquireButton6">ENQUIRE NOW</button>
+							</div>
+					</div>
+				</div>
+				<!-- <div class="container text-center">
 					<a class="responsiveGallery-btn responsiveGallery-btn_prev" href="javascript:void(0);"></a>
 					<a class="responsiveGallery-btn responsiveGallery-btn_next" href="javascript:void(0);"></a>
 					<ul class="responsiveGallery-wrapper">
@@ -437,19 +500,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<li class="responsiveGallery-item"> <a><img src="images/update/Rectangle 77door3.png" alt=""
 							class="responsivGallery-pic"></a><p>ULTRA-SLIM SLIDING</p>
 						</li>
-						<!-- <li class="responsiveGallery-item"> 
-							<a><img src="images/update/Rectangle 83pe4 - Copy.png"
-									height="320" width="320" alt="" class="responsivGallery-pic"></a>
-						</li> -->
 					</ul>
-				</div>
+				</div> -->
 			</section>
 		</div>
-		<div class="container-fluid viewside" style="margin-top: 130px; margin-bottom: 40px;">
-			<div class="container text-center">
-					<button class="button button1" id="enquireButton2">ENQUIRE NOW</button>
-			</div>
-		</div>
+		
 
 		
 
@@ -723,6 +778,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				document.addEventListener('DOMContentLoaded', function () {
 				var enquireButton = document.getElementById('enquireButton');
 				var enquireButton2 = document.getElementById('enquireButton2');
+				var enquireButton3 = document.getElementById('enquireButton3');
+				var enquireButton4 = document.getElementById('enquireButton4');
+				var enquireButton5 = document.getElementById('enquireButton5');
+				var enquireButton6 = document.getElementById('enquireButton6');
 				var modal = document.getElementById('myModal');
 				var closeModal = document.getElementById('closeModal');
 
@@ -737,11 +796,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 				enquireButton2.addEventListener('click', function () {
 					modal.style.display = 'block';
-
-					// Triggering reflow to enable the animation
 					void modal.offsetWidth;
-
-					modal.style.opacity = '1'; // Set opacity to 1 for fade-in effect
+					modal.style.opacity = '1';
+				});
+				enquireButton3.addEventListener('click', function () {
+					modal.style.display = 'block';
+					void modal.offsetWidth;
+					modal.style.opacity = '1';
+				});
+				enquireButton4.addEventListener('click', function () {
+					modal.style.display = 'block';
+					void modal.offsetWidth;
+					modal.style.opacity = '1';
+				});
+				enquireButton5.addEventListener('click', function () {
+					modal.style.display = 'block';
+					void modal.offsetWidth;
+					modal.style.opacity = '1';
+				});
+				enquireButton6.addEventListener('click', function () {
+					modal.style.display = 'block';
+					void modal.offsetWidth;
+					modal.style.opacity = '1';
 				});
 
 				closeModal.addEventListener('click', function () {
