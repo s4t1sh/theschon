@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Glass Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;700&family=Quicksand:wght@500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="newjs/style.css">
+
+
+    <style>
+        @font-face {
+            font-family: magazineBold;
+            src: url(/magazine/Magazine-Bold.ttf);
+        }
+
+        @font-face {
+            font-family: magazineNormal;
+            src: url(/magazine/Magazine.ttf);
+        }
+
+        .landingglass {
+
+            font-family: 'magazineBold';
+            font-style: normal;
+            font-weight: 750;
+            font-size: 35px;
+            padding: 30px 0px;
+            text-align: center;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #4E4E4E;
+            margin: 0px !important;
+        }
+
+        .landingpara {
+
+            font-family: 'Quicksand';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px !important;
+            line-height: 200.69%;
+            text-align: center;
+            /* text-transform: capitalize; */
+            color: #7B7B7B;
+        }
+
+        .mobile {
+            display: none;
+        }
+
+        /* @media only screen and (min-width: 600px) {
+                .mainid {
+                    width: 100%;
+                    height: 100vh;
+                }
+            } */
+
+        @media only screen and (max-width: 600px) {
+            .landingglass {
+
+                font-family: 'magazineBold';
+                font-style: normal;
+                font-weight: 750;
+                font-size: 22px !important;
+                padding: 30px 0px;
+                text-align: center;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: #4E4E4E;
+                margin: 0px !important;
+            }
+
+            .landingpara {
+
+                font-family: 'Quicksand';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px !important;
+                line-height: 200.69%;
+                text-align: center;
+                /* text-transform: capitalize; */
+                color: #7B7B7B;
+                padding: 10px 15px 10px 15px;
+            }
+
+            .slider {
+                position: relative;
+                z-index: 200;
+                padding: 0 0px;
+                margin: 0rem auto;
+                max-width: 800px;
+                width: 100%;
+
+            }
+
+
+            .slick-arrow {
+                position: absolute;
+                top: 50%;
+                width: 40px;
+                height: 50px;
+                line-height: 50px;
+                margin-top: -25px;
+                border: none;
+                background: transparent;
+                color: #000;
+                font-family: monospace;
+                font-size: 1rem !important;
+                z-index: 300;
+                outline: none;
+            }
+
+            .slick-prev {
+                left: -30px !important;
+                text-align: left;
+            }
+
+            .slick-next {
+                right: -30px !important;
+                text-align: right;
+            }
+
+
+            .item.slick-slide.slick-center+.slick-slide {
+                transform: scale(0.6) translate(-250px);
+                z-index: 10;
+            }
+
+            .item.slick-slide.slick-center+.slick-slide+.item.slick-slide {
+                /* transform: scale(0.7)  translate(-640px); */
+                z-index: 5;
+            }
+
+            .item.slick-slide.slick-active {
+                transform: scale(0.6) translate(250px);
+            }
+
+            .item.slick-slide.slick-center {
+                /* margin: 0 -10%; */
+                transform: scale(0.7);
+                z-index: 30;
+            }
+
+            .desktoplogo {
+                display: none;
+            }
+
+            .mobile {
+                display: block;
+            }
+
+
+
+        }
+
+        /* @media only screen and (min-width: 360px) {
+            .item.slick-slide.slick-center+.slick-slide {
+                transform: scale(0.4) translate(-250px);
+                z-index: 10;
+            }
+
+            .item.slick-slide.slick-center+.slick-slide+.item.slick-slide {
+                 
+                z-index: 5;
+            }
+
+            .item.slick-slide.slick-active {
+                transform: scale(0.4) translate(250px);
+            }
+
+            .item.slick-slide.slick-center {
+                
+                transform: scale(0.5);
+                z-index: 30;
+            }
+
+            .desktoplogo{
+                display: none;
+            }
+
+            .mobile{
+                display: block;
+            }
+
+        } */
+    </style>
+</head>
+
+<body>
+
+    <!-- partial:index.partial.html -->
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+
+    <div class="container desktoplogo text-center p-3">
+        <a href="window.html"> <img src="images/Schonlanding.png" width="30%" height="auto" /></a>
+    </div>
+
+    <div class="container mobile text-center p-3">
+        <a href="window.html"> <img src="images/Schonlanding.png" width="50%" height="auto" /></a>
+    </div>
+    <div class="container">
+
+        <div class="wrap">
+            <div class="slider">
+
+                <div class="item">
+                    <img src="images/g1.png" alt="slide1">
+                </div>
+                <div class="item">
+                    <img src="images/g2.png" alt="slide2">
+                </div>
+                <div class="item">
+                    <img src="images/g3.png" alt="slide3">
+                </div>
+                <div class="item">
+                    <img src="images/g1.png" alt="slide1">
+                </div>
+                <div class="item">
+                    <img src="images/g2.png" alt="slide2">
+                </div>
+                <div class="item">
+                    <img src="images/g3.png" alt="slide3">
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <p class="landingglass">LUXURY GLASS</p>
+        <p class="landingpara">
+            The Schon, German for Beautiful, is your
+            new destination for luxury living. A brand
+            that intends to transform and create
+            beautiful spaces in every one of its clients
+            homes. We bring you the best in class,
+            in-house manufactured windows, doors,
+            wardrobes, kitchens, exotic glasses, railing
+            systems, shower cubicles and decorative metal.
+        </p>
+
+    </div>
+
+    <div class="container text-center py-3">
+        <img src="images/gs20Copy.png" class="img-fluid" />
+    </div>
+
+
+    <!-- <div class="container">
+
+        <div class="wrap">
+            <div class="slider">
+
+                <div class="item">
+                    <img src="images/g1.png" alt="slide1">
+                </div>
+                <div class="item">
+                    <img src="images/g2.png" alt="slide2">
+                </div>
+                <div class="item">
+                    <img src="images/g3.png" alt="slide3">
+                </div>
+                <div class="item">
+                    <img src="images/g1.png" alt="slide1">
+                </div>
+                <div class="item">
+                    <img src="images/g2.png" alt="slide2">
+                </div>
+                <div class="item">
+                    <img src="images/g3.png" alt="slide3">
+                </div>
+                 
+
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container"
+        style="display:flex;flex-direction: row;gap:30px;justify-content: center;padding-bottom: 15px;">
+
+        <div style="text-align: center;">
+            <img src="images/Vectorsafty.png" class="img-fluid" />
+            <p class="landingpara mt-4">SAFETY </p>
+        </div>
+        <div style="text-align: center;">
+            <img src="images/Group 54lock.png" class="img-fluid" />
+            <p class="landingpara mt-4">SECURITY</p>
+        </div>
+        <div style="text-align: center;">
+            <img src="images/Group 55service.png" class="img-fluid" />
+            <p class="landingpara mt-4">SERVICE</p>
+        </div>
+        <!-- <div class="row">
+            <div class="col-sm-4 text-center">
+                <img src="images/Vectorsafty.png" class="img-fluid" />
+                <p class="landingpara mt-4">SAFETY </p>
+            </div>
+            <div class="col-sm-4 text-center">
+                <img src="images/Group 54lock.png" class="img-fluid" />
+                <p class="landingpara mt-4">SECURITY</p>
+            </div>
+            <div class="col-sm-4 text-center">
+                <img src="images/Group 55service.png" class="img-fluid" />
+                <p class="landingpara mt-4">SERVICE</p>
+            </div>
+        </div> -->
+    </div>
+
+    <footer>
+        <div class="container-fluid bg-dark">
+            <p class="landingglass" style="color:#d9d9d9">OUR EXPERIENCE CENTRE</p>
+            <p class="landingpara" style="color:#EAEAEA">
+                # 19, Queens road, Cantonment railway
+                quarters, Bengaluru, Karnataka.
+            </p>
+            <p class="landingglass" style="color:#d9d9d9">
+                CONTACT DETAILS
+            </p>
+
+            <p class="landingpara" style="color:#EAEAEA">
+                Contact@theschon.com
+
+            </p>
+            <p class="landingpara" style="color:#EAEAEA">
+                +91-99455 44748
+            </p>
+            <div style="display:flex;flex-direction: row;gap:30px;justify-content: center;padding-bottom: 120px;">
+
+                <a><img src="images/Unionnewinsta.svg" width="35" height="auto" /></a>
+                <a><img src="images/Groupface.svg" width="35" height="auto" /></a>
+                <a><img src="images/Grouptwitter.svg" width="35" height="auto" /></a>
+
+            </div>
+        </div>
+        <div class="container-fluid p-4 fixed-bottom" style="background-color: #000000;">
+            <div style="text-align: center;">
+                <a href="https://api.whatsapp.com/send?phone=919535359481"><button type="button"
+                        class="btn btn-secondary btn-lg btn-block"
+                        style="padding:12px 70px 12px 70px;background-color: #231F20;color: #FFF;border:none;">GET
+                        QUOTE</button></a>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="newjs/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

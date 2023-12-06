@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Basic Page Needs
+	================================================== -->
+	<meta charset="utf-8">
+	<title>The SCHON</title>
+
+	<!-- Mobile Specific Metas
+	================================================== -->
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- CSS
+	================================================== -->
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<!-- Template styles-->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Responsive styles-->
+	<link rel="stylesheet" href="css/responsive.css">
+	<!-- FontAwesome -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- Animation -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Colorbox -->
+	<link rel="stylesheet" href="css/colorbox.css">
+	<link rel="stylesheet" type="text/css" href="project/css/style.css">
+
+	<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="project/css/jquery-responsiveGallery.css">
+	<link rel="stylesheet" href="css/vender/floating-wpp.min.css">
+	<style>
+		.carousel-container-height {
+			height: 80vh !important;
+			position: relative;
+		}
+
+		.form-container {
+			right: 100px;
+			top: 0px;
+			position: absolute;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.form-container>div {
+			background-color: #fff;
+			border-radius: 10px;
+			padding: 20px;
+		}
+
+		.form-container h5 {
+			font-size: 20px;
+			margin-bottom: 45px;
+			text-transform: uppercase;
+		}
+
+		.form-container form {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+		}
+
+		.form-container input {
+			padding: 8px 14px;
+			outline: none;
+			width: 300px;
+			display: block;
+			color: black;
+		}
+
+		.form-left{
+			left: 100px;
+			top: 45%;
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.form-left p{
+			margin: 0px;
+			padding: 10px;
+			font-family: 'magazineNormal' !important;
+			color: white;
+			font-size: xx-large;
+			background-color: rgb(0 0 0 / 55%);
+    		box-shadow: 10px 10px 8px rgb(255 255 255 / 90%);
+			word-spacing: 5px;
+		}
+
+		@media screen and (max-width: 767px) {
+			.carousel-container-height {
+				height: 60rem !important;
+				/* position: absolute; */
+			}
+
+			.form-container {
+				left: 25%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				text-align: center;
+				position: absolute;
+			}
+		}
+	</style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WBSQRXRG');</script>
+<!-- End Google Tag Manager -->
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '875701817259560');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=875701817259560&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBSQRXRG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+	<!-- SMTP JS -->
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script>
+		function submitForm(event) {
+			event.preventDefault();
+
+			const name = document.getElementById('nameInp').value;
+			const email = document.getElementById('emailInp').value;
+			const phone = document.getElementById('phoneInp').value;
+			const state = document.getElementById('stateInp').value;
+			const city = document.getElementById('cityInp').value;
+			const pincode = document.getElementById('pincodeInp').value;
+
+			Email.send({
+				Host: 'smtp.elasticemail.com',
+				Username: 'vasettisatish@gmail.com',
+				Password: '03F085010ED813A909D3EDCEC3FAFBDABCC0',
+				To: 'a851601@gmail.com',
+				From: email,
+				Subject: `${name} contacted from website`,
+				Body: `Name: ${name} | Email: ${email} | Mobile: ${mobile} | State: ${state} | City: ${city} | Pincode: ${pincode}`,
+			})
+				.then(function (message) {
+					alert("Email sent successfully");
+				})
+				.catch(function (error) {
+					console.error("Error sending email: ", error);
+				});
+		}
+	</script>
+
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6MFWN2Z" height="0" width="0"
+			style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<div class="body-inner">
+		<!--Start Preloader -->
+		<!-- Header start -->
+		<div class="body-inner">
+			<header id="header" class="header">
+				<div class="container">
+					<div class="row">
+						<div class="navbar-header">
+							<div class="logo">
+								<a href="index.html">
+									<img src="images/newimage/Group 412.png" alt="" class="window">
+									<img src="images/newimage/Group 412.png" class="mobile">
+								</a>
+							</div>
+						</div>
+
+						<div class="site-nav-inner">
+							<button type="button" class="navbar-toggle" data-toggle="collapse"
+								data-target=".navbar-collapse">
+								<!-- <span class="sr-only">Toggle navigation</span> -->
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+
+							<nav class="collapse colr navbar-collapse navbar-responsive-collapse pull-right">
+
+								<ul class="nav navbar-nav ">
+									<li>
+										<a href="window1.html">WINDOWS</a>
+									</li>
+									<li>
+										<a href="door1.html">DOORS</a>
+									</li>
+									<li>
+										<a href="railings.html">RAILINGS</a>
+									</li>
+									<li>
+										<a href="glitter.html">GLASS</a>
+									</li>
+
+									<li>
+										<a href="cubicles1.html">CUBICLES</a>
+									</li>
+									<li>
+										<a href="kitchen.html">KITCHENS</a>
+									</li>
+									<li>
+										<a href="wardrobe.html">WARDROBES</a>
+									</li>
+									<li>
+										<a href="projectexecutive.html">PROJECTS</a>
+									</li>
+
+
+								</ul>
+
+
+							</nav>
+
+						</div>
+					</div>
+				</div>
+		</div>
+		</header>
+
+
+		<!--/ Header end -->
+		<div class="about-section window-sec">
+			<div class="w-100 carousel-container-height d-flex">
+				<img src="images/slider-main/bg3.png" alt="schon-banner-image2"
+					style="width:100%; height: 100%; object-fit: cover;">
+
+				<div class="form-left">
+					<p>Step into Luxury</p>
+					<p style="margin-top: 20px;">Open Your Door to The Schon's Exclusive Designer Doors.</p>
+				</div>
+
+				<div class="form-container">
+					<div>
+						<h5>Enquire Now</h5>
+						<form method="POST" action="sendmail.php">
+							<input type="text" id="nameInp" name="nameInp" required placeholder="Name">
+							<input type="email" id="emailInp" name="emailInp" required placeholder="Email">
+							<input type="number" id="phoneInp" name="phoneInp" required placeholder="Phone number">
+							<!-- <input type="text" id="stateInp" name="stateInp" required placeholder="State">
+							<input type="text" id="cityInp" name="cityInp" required placeholder="City">
+							<input type="number" id="pincodeInp" name="pincodeInp" required placeholder="Pincode"> -->
+							<input type="submit" value="SUBMIT"
+								style="background-color: #7D7D7D; outline: none; color: white; border: none; font-weight: 500;">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="about-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5">
+						<img src="images/update/Rectangle 73index1.png" class="img-responsive">
+					</div>
+					<div class="col-lg-7">
+						<div class="about-title">
+							<h3>About Us</h3>
+						</div>
+						<p style="padding-top:20px;text-align: justify;">Welcome to Schon — where your quest for luxury
+							and practicality in home living finds its answer. Our name means 'beautiful' in German, a
+							standard we uphold in every custom-designed window, door, wardrobe, and kitchen we create.
+							Schon is about bringing your vision to life with a touch of elegance, from chic glass
+							features to contemporary metalwork.
+							<br>
+							<b>Quality and craftsmanship</b> are at the heart of Schon's ethos. We offer personalized,
+							engineered solutions to make your space truly yours. Our team works hand-in-hand with you to
+							ensure your home reflects your personal style, down to the finest detail. <br>
+							Choose Schon for a seamless experience that prioritizes your satisfaction. We're not just
+							about transforming spaces; we're about perfecting your home with simplicity and style. Trust
+							Schön to be your partner in crafting a home that's as beautiful as it is functional.
+						<div class="about-title">
+							<h3>Our Commitment</h3>
+						</div>
+						<p style="text-align: justify;">
+							At Schon, we marry the latest style with exceptional craftsmanship to suit your unique
+							tastes. We specialize in personal touches, ensuring that every detail is tailored to your
+							preferences. Our commitment is to bring <b>unparalleled quality and customization</b> into
+							your living space, reflecting the heart of our brand philosophy: <b>Your home, your way,
+								with
+								nothing but the best from us.</b>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div> -->
+
+		<div class="w-gallery">
+			<section id="responsiveGallery-container" style="padding-top:10px;background-color: #fff !important;">
+				<div class="about-title text-center">
+					<h3>OUR PRODUCTS</h3>
+					<h2 style="font-family:'Magazine' !important;font-size:750;letter-spacing:4px !important;">Quality
+						is always a Priority</h2>
+				</div>
+
+				<div class="container text-center">
+					<a class="responsiveGallery-btn responsiveGallery-btn_prev" href="javascript:void(0);"></a>
+					<a class="responsiveGallery-btn responsiveGallery-btn_next" href="javascript:void(0);"></a>
+					<ul class="responsiveGallery-wrapper">
+						<li class="responsiveGallery-item"> <a><img src="images/update/Rectangle 23index3.png" alt=""
+									class="responsivGallery-pic"></a><p style="margin: 10px 0px; font-size: 18px;">ULTRA-SLIM SLIDING</p>
+						</li>
+						<li class="responsiveGallery-item"> <a><img src="images/update/Rectangle 24index4.png" alt=""
+									class="responsivGallery-pic"></a><p style="margin: 10px 0px; font-size: 18px;">BI-FOLD DOORS</p>
+						</li>
+						<li class="responsiveGallery-item"> <a><img src="images/update/Rectangle 22index2.png"
+									height="320" width="320" alt="" class="responsivGallery-pic"></a><p style="margin: 10px 0px; font-size: 18px;">SOLID DOORS</p>
+						</li>
+						<li class="responsiveGallery-item"> <a><img src="images/update/Rectangle 23index3.png" alt=""
+							class="responsivGallery-pic"></a><p style="margin: 10px 0px; font-size: 18px;">ULTRA-SLIM SLIDING</p>
+						</li>
+						<li class="responsiveGallery-item"> <a><img src="images/update/Rectangle 95p9 - Copy.png"
+									height="320" width="320" alt="" class="responsivGallery-pic"></a><p style="margin: 10px 0px; font-size: 18px;">DECORATIVE DOORS</p>
+						</li>
+						<li class="responsiveGallery-item"> <a><img src="images/update/Rectangle 83pe6 - Copy.png"
+									height="320" width="320" alt="" class="responsivGallery-pic"></a><p style="margin: 10px 0px; font-size: 18px;">16 SERIES</p>
+						</li>
+						
+						<!-- <li class="responsiveGallery-item"> 
+							<a><img src="images/update/Rectangle 83pe4 - Copy.png"
+									height="320" width="320" alt="" class="responsivGallery-pic"></a>
+						</li> -->
+					</ul>
+				</div>
+			</section>
+		</div>
+		<div class="container-fluid viewside" style="margin-top: 130px; margin-bottom: 40px;">
+			<div class="container text-center">
+				<a href="projectexecutive.html">
+					<button class="button button1">ENQUIRE NOW</button>
+				</a>
+			</div>
+		</div>
+
+		<!-- <div class="about-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="about-title text-center">
+							<h3>HOW IT WORKS ?</h3>
+						</div>
+						<p style="padding-top:20px;text-align: justify;">
+							Want to make your dream home a reality? Here’s how to start with Schon:
+						</p>
+						<ol>
+							<li>
+								<b>Get in Touch:</b> Just give us a call or drop us a message.
+							</li>
+							<li>
+								<b>Let’s Chat:</b> We’d love to meet you! Come have a coffee with us at our showroom to
+								talk
+								about your ideas.
+							</li>
+							<li>
+								<b>See the Possibilities:</b> We’ll show you around and give you a taste of how we can
+								make
+								your space look and feel amazing.
+							</li>
+							<li>
+								<b>Tailored for You:</b> Our designers will talk with you to understand what you want,
+								visit
+								your home to get a better idea, and then draw up designs just for you.
+							</li>
+							<li>
+								<b>Your Approval:</b> You check and give us the thumbs up on the design.
+							</li>
+							<li>
+								<b>We Build:</b> Then we take those designs and turn them into reality.
+							</li>
+							<li>
+								<b>Installation:</b> In just 90 days, we’ll install everything and make sure it's all
+								done
+								perfectly.
+							</li>
+						</ol>
+						
+					</div> -->
+
+
+					<div class="container-fluid bg-dark h-300">
+						<div class="container">
+							<!-- <div class="row">
+								<div class="col-lg-3 mt-2 text-center">
+									<img src="images/icon1.png" width="25%" height="auto">
+									<h6 class="text-center"
+										style="font-family: 'Quicksand'sans-serif;font-weight: 500; font-size: 20px; color:#7b7b7b">
+										Consultation</h6>
+								</div>
+								<div class="col-lg-3 mt-2 text-center">
+									<img src="images/icon2.png" width="25%" height="auto">
+									<h6 class="text-center"
+										style="font-family: 'Quicksand'sans-serif;font-weight: 500; font-size: 20px; color:#7b7b7b ">
+										Approval</h6>
+								</div>
+								<div class="col-lg-3 mt-2 text-center">
+									<img src="images/icon3.png" width="25%" height="auto">
+									<h6 class="text-center"
+										style="font-family: 'Quicksand'sans-serif;font-weight: 500; font-size: 20px; color:#7b7b7b ">
+										Production</h6>
+								</div>
+								<div class="col-lg-3 mt-2 text-center">
+									<img src="images/icon4.png" width="25%" height="auto">
+									<h6 class="text-center"
+										style="font-family: 'Quicksand'sans-serif;font-weight: 500; font-size: 20px; color:#7b7b7b ">
+										Installation</h6>
+								</div>
+
+							</div> -->
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="margin-top: 3rem;">
+			<div class="container">
+				<div class="row">
+					<div class="about-title text-center">
+						<h3>Testimonials</h3>
+						<!-- <h3><span>Build your</span> Dream Home <span>with us</span></h3> -->
+					</div>
+					<div class="row text-center" style="margin-top: 3rem;">
+						<div class="col-md-4 mb-5 mb-md-0">
+							<div class="d-flex justify-content-center mb-4 rounded-circle overflow-hidden">
+								<img src="images/user-icon.png" width="150" height="150" style="border-radius: 100%;" />
+							</div>
+							<h5 class="mb-3">Rahul</h5>
+							<p class="px-xl-3">Schon transformed our house into a masterpiece! The attention to detail
+								in every custom-designed window and door is unmatched. Our home now exudes both luxury
+								and practicality—exactly what we were looking for. Thank you, Schon, for making our
+								dream home a reality!
+							</p>
+						</div>
+						<div class="col-md-4 mb-5 mb-md-0">
+							<div class="d-flex justify-content-center mb-4">
+								<img src="images/user-icon.png" style="border-radius: 100%;" width="150" height="150" />
+							</div>
+							<h5 class="mb-3">Sourabh</h5>
+							<p class="px-xl-3">Choosing Schon was the best decision we made for our home. The
+								personalized, engineered solutions they provided for our kitchen and wardrobe exceeded
+								our expectations. The team worked closely with us, ensuring that every aspect reflected
+								our style. Our space is now a true reflection of us, thanks to Schon!
+							</p>
+						</div>
+						<div class="col-md-4 mb-0">
+							<div class="d-flex justify-content-center mb-4">
+								<img src="images/user-icon.png" style="border-radius: 100%;" width="150" height="150" />
+							</div>
+							<h5 class="mb-3">Somesh</h5>
+							<p class="px-xl-3">Schon doesn't just transform spaces; they perfect them. Our experience
+								with Schon was exceptional—from concept to execution, they prioritized our vision. Our
+								home now stands as a testament to their brand philosophy: personalized, elegant, and
+								nothing short of the best
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<footer id="footer" class="footer">
+				<div class="footer-main">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-5 col-sm-12 footer-widget footer-about">
+								<div>
+									<h3 class="widget-title">Our Experience Centre</h3>
+									<p>19 Sharp Building, Queens Road, Vasanth Nagar, Bengaluru, Karnataka, India</p>
+								</div>
+								<div>
+									<h3 class="widget-title pt-30">Contact details</h3>
+									<p>contact@theschon.com<br>
+										<span><a href="tel:07893065737">Mobile - 7893065737</a></span>
+									</p>
+								</div>
+							</div><!-- Col end -->
+
+							<div class="col-md-4 col-sm-12">
+								<h3 class="widget-title">Useful links</h3>
+								<div class="footer-social">
+									<ul>
+										<!--	<li><a href="aboutus.html">About us</a></li> -->
+										<li><a href="itwork.html">How it works</a></li>
+										<li><a href="whychoseus.html">Why Choose Us</a></li>
+										<li><a href="faq.html">FAQ's</a></li>
+									</ul>
+								</div><!-- Footer social end -->
+
+							</div><!-- Col end -->
+							<div class="col-md-3 col-sm-12">
+								<h3 class="widget-title">Follow us</h3>
+								<div class="footer-social">
+									<div class="ml">
+										<ul>
+											<li><a href="https://www.instagram.com/schon_doorways/" target="_blank"><i
+														class="fa fa-instagram"></i></a></li>
+											<li><a href="https://www.facebook.com/Ajay.doorways" target="_blank"><i
+														class="fa fa-facebook"></i></a></li>
+											<!-- <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li> -->
+										</ul>
+									</div>
+								</div><!-- Footer social end -->
+
+
+							</div><!-- Col end -->
+							<div class="col-xs-12 col-sm-12">
+								<div class="copyright-info">
+									<a href="terms.html">Terms and Conditions -<a href="privacy.html"><span> Privacy
+												Policy</span></a></a>
+								</div>
+							</div>
+						</div><!-- Row end -->
+					</div><!-- Container end -->
+				</div><!-- Footer main end -->
+
+
+				<!-- floating wp button  -->
+				<div class="floating-wpp" style="z-index:99;">
+					<a class="show" href="https://api.whatsapp.com/send?phone=917893065737" target="_blank">
+						<img src="images/fresh/whatsapp.svg" style="width: 60px;">
+
+					</a>
+					&nbsp;
+					<a href="tel:07893065737" class="show" target="_blank"><img src="images/update/support.png"
+							style="width: 55px;"></a>
+					<!-- <img src="whatsapp-logo.svg" style="width: 50px;"> -->
+				</div>
+
+			</footer><!-- Footer end -->
+			<div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top affix">
+				<button class="btn btn-primary" title="Back to Top">
+					<i class="fa fa-angle-double-up"></i>
+				</button>
+			</div>
+
+			<!-- Javascript Files
+	================================================== -->
+
+			<script>
+				function openNav() {
+					document.getElementById("mySidenav").style.width = "250px";
+				}
+
+				function closeNav() {
+					document.getElementById("mySidenav").style.width = "0";
+				}
+			</script>
+
+
+
+
+			<!-- initialize jQuery Library -->
+
+			<script type="text/javascript" src="js/jquery.js"></script>
+			<!-- Bootstrap jQuery -->
+			<script type="text/javascript" src="js/bootstrap.min.js"></script>
+			<!-- Wow JS -->
+			<script src="js/wow.min.js"></script>
+			<script src="project/js/magnific-popup.min.js"></script>
+			<!-- MAGNIFIC-POPUP JS -->
+
+			<!-- Owl Carousel -->
+			<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+			<!-- Counter -->
+			<script type="text/javascript" src="js/jquery.counterup.min.js"></script>
+			<!-- Waypoints -->
+			<script type="text/javascript" src="js/waypoints.min.js"></script>
+			<!-- Color box -->
+			<script type="text/javascript" src="js/jquery.colorbox.js"></script>
+			<!-- Isotope -->
+			<script type="text/javascript" src="js/isotope.js"></script>
+			<script type="text/javascript" src="js/ini.isotope.js"></script>
+
+			<!-- Template custom -->
+
+			<script type="text/javascript" src="js/custom.js"></script>
+
+			<script src="project/js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
+			<script type="text/javascript" src="js/load1.js"></script>
+			<script type="text/javascript" src="js/load2.js"></script>
+			<script type="text/javascript" src="project/lib/modernizr.custom.js"></script>
+			<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+			<script type="text/javascript" src="project/src/jquery.responsiveGallery.js"></script>
+			<script type="text/javascript">
+				$(function () {
+					$('.responsiveGallery-wrapper').responsiveGallery({
+						animatDuration: 400,
+						$btn_prev: $('.responsiveGallery-btn_prev'),
+						$btn_next: $('.responsiveGallery-btn_next')
+					});
+				});
+
+			</script>
+		</div><!-- Body inner end -->
+</body>
+
+</html>
