@@ -81,6 +81,44 @@
 			color: black;
 		}
 
+		.form-container-bottom {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.form-container-bottom>div {
+			background-color: transparent;
+			border-radius: 10px;
+			padding: 20px;
+			margin-bottom: 50px;
+			margin-top: 25px;
+			box-shadow: 0 0 14px rgba(0, 0, 0, 0.5);
+		}
+
+		.form-container-bottom h5 {
+			font-size: 20px;
+			margin-bottom: 45px;
+			text-transform: uppercase;
+		}
+
+		.form-container-bottom form {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+		}
+
+		.form-container-bottom input {
+			padding: 8px 14px;
+			outline: none;
+			width: 500px;
+			display: block;
+			color: black;
+		}
+
 		.form-left{
 			left: 100px;
 			top: 45%;
@@ -103,6 +141,42 @@
 			word-spacing: 5px;
 		}
 
+		.responsiveGallery-item p{
+			margin: 25px 0px;
+			font-size: 18px;
+			font-family: 'magazineNormal' !important;
+		}
+
+		.modal {
+				display: none;
+				position: fixed;
+				z-index: 9999;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background-color: rgba(0,0,0,0.5);
+				opacity: 0; /* Set initial opacity to 0 */
+    			transition: opacity 0.8s ease;
+			}
+
+			.modal-content {
+				background-color: #fefefe;
+				margin: 70px auto;
+				padding: 20px;
+				border: 1px solid #888;
+				width: fit-content;
+			}
+
+			.close {
+				color: #aaa;
+				float: right;
+				font-size: 28px;
+				font-weight: bold;
+				cursor: pointer;
+			}
+
 		@media screen and (max-width: 767px) {
 			.carousel-container-height {
 				height: 60rem !important;
@@ -118,6 +192,15 @@
 				text-align: center;
 				position: absolute;
 			}
+
+			.form-container-bottom input {
+			padding: 8px 14px;
+			outline: none;
+			width: 300px;
+			display: block;
+			color: black;
+		}
+
 		}
 	</style>
 <!-- Google Tag Manager -->
@@ -335,25 +418,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<a class="responsiveGallery-btn responsiveGallery-btn_prev" href="javascript:void(0);"></a>
 					<a class="responsiveGallery-btn responsiveGallery-btn_next" href="javascript:void(0);"></a>
 					<ul class="responsiveGallery-wrapper">
-						<li class="responsiveGallery-item"> <a><img src="images/update/Rectangle 23index3.png" alt=""
-									class="responsivGallery-pic"></a><p style="margin: 10px 0px; font-size: 18px;">ULTRA-SLIM SLIDING</p>
-						</li>
-						<li class="responsiveGallery-item"> <a><img src="images/update/Rectangle 24index4.png" alt=""
-									class="responsivGallery-pic"></a><p style="margin: 10px 0px; font-size: 18px;">BI-FOLD DOORS</p>
-						</li>
-						<li class="responsiveGallery-item"> <a><img src="images/update/Rectangle 22index2.png"
-									height="320" width="320" alt="" class="responsivGallery-pic"></a><p style="margin: 10px 0px; font-size: 18px;">SOLID DOORS</p>
-						</li>
-						<li class="responsiveGallery-item"> <a><img src="images/update/Rectangle 23index3.png" alt=""
-							class="responsivGallery-pic"></a><p style="margin: 10px 0px; font-size: 18px;">ULTRA-SLIM SLIDING</p>
-						</li>
-						<li class="responsiveGallery-item"> <a><img src="images/update/Rectangle 95p9 - Copy.png"
-									height="320" width="320" alt="" class="responsivGallery-pic"></a><p style="margin: 10px 0px; font-size: 18px;">DECORATIVE DOORS</p>
-						</li>
-						<li class="responsiveGallery-item"> <a><img src="images/update/Rectangle 83pe6 - Copy.png"
-									height="320" width="320" alt="" class="responsivGallery-pic"></a><p style="margin: 10px 0px; font-size: 18px;">16 SERIES</p>
-						</li>
 						
+						<li class="responsiveGallery-item"> <a><img src="images/update/Rectangle 81door5.png" alt=""
+									class="responsivGallery-pic"></a><p>BI-FOLD DOORS</p>
+						</li>
+						<li class="responsiveGallery-item"> <a><img src="images/update/Rectangle 79door6.png"
+									height="320" width="320" alt="" class="responsivGallery-pic"></a><p>SOLID DOORS</p>
+						</li>
+						<li class="responsiveGallery-item"> <a><img src="images/update/Rectangle 77door3.png" alt=""
+							class="responsivGallery-pic"></a><p>ULTRA-SLIM SLIDING</p>
+						</li>
+						<li class="responsiveGallery-item"> <a><img src="images/update/Rectangle 80door7.png"
+									height="320" width="320" alt="" class="responsivGallery-pic"></a><p>DECORATIVE DOORS</p>
+						</li>
+						<li class="responsiveGallery-item"> <a><img src="images/update/Rectangle 78door4.png"
+									height="320" width="320" alt="" class="responsivGallery-pic"></a><p>16 SERIES</p>
+						</li>
+						<li class="responsiveGallery-item"> <a><img src="images/update/Rectangle 77door3.png" alt=""
+							class="responsivGallery-pic"></a><p>ULTRA-SLIM SLIDING</p>
+						</li>
 						<!-- <li class="responsiveGallery-item"> 
 							<a><img src="images/update/Rectangle 83pe4 - Copy.png"
 									height="320" width="320" alt="" class="responsivGallery-pic"></a>
@@ -364,11 +447,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</div>
 		<div class="container-fluid viewside" style="margin-top: 130px; margin-bottom: 40px;">
 			<div class="container text-center">
-				<a href="projectexecutive.html">
-					<button class="button button1">ENQUIRE NOW</button>
-				</a>
+					<button class="button button1" id="enquireButton2">ENQUIRE NOW</button>
 			</div>
 		</div>
+
+		
 
 		<!-- <div class="about-section">
 			<div class="container">
@@ -456,15 +539,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div class="container">
 				<div class="row">
 					<div class="about-title text-center">
-						<h3>Testimonials</h3>
+						<h3>Trusted by Thousands of Families</h3>
 						<!-- <h3><span>Build your</span> Dream Home <span>with us</span></h3> -->
 					</div>
-					<div class="row text-center" style="margin-top: 3rem;">
+					<div class="row text-center" style="margin-top: 8rem;">
 						<div class="col-md-4 mb-5 mb-md-0">
 							<div class="d-flex justify-content-center mb-4 rounded-circle overflow-hidden">
 								<img src="images/user-icon.png" width="150" height="150" style="border-radius: 100%;" />
 							</div>
-							<h5 class="mb-3">Rahul</h5>
+							<h5 class="mb-3">Rahul Reghunath</h5>
 							<p class="px-xl-3">Schon transformed our house into a masterpiece! The attention to detail
 								in every custom-designed window and door is unmatched. Our home now exudes both luxury
 								and practicality—exactly what we were looking for. Thank you, Schon, for making our
@@ -475,7 +558,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<div class="d-flex justify-content-center mb-4">
 								<img src="images/user-icon.png" style="border-radius: 100%;" width="150" height="150" />
 							</div>
-							<h5 class="mb-3">Sourabh</h5>
+							<h5 class="mb-3">Swati Iyer</h5>
 							<p class="px-xl-3">Choosing Schon was the best decision we made for our home. The
 								personalized, engineered solutions they provided for our kitchen and wardrobe exceeded
 								our expectations. The team worked closely with us, ensuring that every aspect reflected
@@ -486,7 +569,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<div class="d-flex justify-content-center mb-4">
 								<img src="images/user-icon.png" style="border-radius: 100%;" width="150" height="150" />
 							</div>
-							<h5 class="mb-3">Somesh</h5>
+							<h5 class="mb-3">Nagarjuna Bhandari</h5>
 							<p class="px-xl-3">Schon doesn't just transform spaces; they perfect them. Our experience
 								with Schon was exceptional—from concept to execution, they prioritized our vision. Our
 								home now stands as a testament to their brand philosophy: personalized, elegant, and
@@ -495,7 +578,57 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</div>
 					</div>
 				</div>
+				
+					<div class="container text-center" >
+							<button class="button button1" id="enquireButton" style="margin-right: 42px; margin-top: 3rem;">ENQUIRE NOW</button>
+					</div>
 			</div>
+
+			<div class="modal" id="myModal">
+				<div class="modal-content">
+					<span class="close" id="closeModal">&times;</span>
+					<div class="form-container-bottom" >
+						<div style="box-shadow: none !important; ">
+							<h5>Enquire Now</h5>
+							<form method="POST" action="sendmail.php">
+								<input type="text" id="nameInp" name="nameInp" required placeholder="Name">
+								<input type="email" id="emailInp" name="emailInp" required placeholder="Email">
+								<input type="number" id="phoneInp" name="phoneInp" required placeholder="Phone number">
+								<!-- <input type="text" id="stateInp" name="stateInp" required placeholder="State">
+								<input type="text" id="cityInp" name="cityInp" required placeholder="City">
+								<input type="number" id="pincodeInp" name="pincodeInp" required placeholder="Pincode"> -->
+								<input type="submit" value="SUBMIT"
+									style="background-color: #7D7D7D; outline: none; color: white; border: none; font-weight: 500;">
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div style="margin-top: 5rem;">
+				<div class="container">
+					<div class="row">
+						<div class="about-title text-center">
+							<h3 class="text-center">Ready to Elevate Your Home?</h3>
+							<h3 class="text-center">Experience the Schon Difference Today</h3>
+						</div>
+						<div class="form-container-bottom">
+							<div>
+								<h5>Enquire Now</h5>
+								<form method="POST" action="sendmail.php">
+									<input type="text" id="nameInp" name="nameInp" required placeholder="Name">
+									<input type="email" id="emailInp" name="emailInp" required placeholder="Email">
+									<input type="number" id="phoneInp" name="phoneInp" required placeholder="Phone number">
+									<!-- <input type="text" id="stateInp" name="stateInp" required placeholder="State">
+									<input type="text" id="cityInp" name="cityInp" required placeholder="City">
+									<input type="number" id="pincodeInp" name="pincodeInp" required placeholder="Pincode"> -->
+									<input type="submit" value="SUBMIT"
+										style="background-color: #7D7D7D; outline: none; color: white; border: none; font-weight: 500;">
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
 
 
 			<footer id="footer" class="footer">
@@ -586,7 +719,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				}
 			</script>
 
+			<script>
+				document.addEventListener('DOMContentLoaded', function () {
+				var enquireButton = document.getElementById('enquireButton');
+				var enquireButton2 = document.getElementById('enquireButton2');
+				var modal = document.getElementById('myModal');
+				var closeModal = document.getElementById('closeModal');
 
+				enquireButton.addEventListener('click', function () {
+					modal.style.display = 'block';
+
+					// Triggering reflow to enable the animation
+					void modal.offsetWidth;
+
+					modal.style.opacity = '1'; // Set opacity to 1 for fade-in effect
+				});
+
+				enquireButton2.addEventListener('click', function () {
+					modal.style.display = 'block';
+
+					// Triggering reflow to enable the animation
+					void modal.offsetWidth;
+
+					modal.style.opacity = '1'; // Set opacity to 1 for fade-in effect
+				});
+
+				closeModal.addEventListener('click', function () {
+					modal.style.opacity = '0'; // Set opacity to 0 for fade-out effect
+
+					// Hide the modal after the animation completes
+					setTimeout(function () {
+						modal.style.display = 'none';
+					}, 500); // Adjust the timeout to match the transition duration
+				});
+
+				window.addEventListener('click', function (event) {
+					if (event.target === modal) {
+						modal.style.opacity = '0'; // Set opacity to 0 for fade-out effect
+
+						// Hide the modal after the animation completes
+						setTimeout(function () {
+							modal.style.display = 'none';
+						}, 500); // Adjust the timeout to match the transition duration
+					}
+				});
+			});
+
+			</script>
 
 
 			<!-- initialize jQuery Library -->
