@@ -20,6 +20,9 @@
             header("Location: admin.php?message=Incorrect username or password");
         }
     }
+    else{
+        header("Location: admin.php");
+    }
         mysqli_close($con);
 ?>
 
@@ -30,7 +33,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Admin Panel | The Schon</title>
-
+    <link href="images/newimage/logo.png" rel="icon">
+    <link href="images/newimage/logo.png" rel="apple-touch-icon">
     <style>
         body{
             padding: 10px 10px;

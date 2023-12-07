@@ -16,7 +16,6 @@ $insert_qry="INSERT INTO enquiries() VALUES(NULL,'$first_name','$email_from','$t
 mysqli_query($con,$insert_qry);
 
 $subject = "Thanks for contacting us";
-
 $message = "
 <html>
 <head>
@@ -57,6 +56,7 @@ curl_setopt_array($curl, array(
 $response = curl_exec($curl);
 
 curl_close($curl);
+
 echo "
 <html>
 <head>
