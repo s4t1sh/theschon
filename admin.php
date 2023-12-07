@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Pages / Login - NiceAdmin Bootstrap Template</title>
+  <title>The Schon | Admin Panel</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -89,7 +89,12 @@
                 </div>
               </div>
 
-              
+              <?php
+                if(isset($_GET['message'])){
+                  $message = $_GET['message'];
+                  echo "<p class='text-danger'>".$message."</p>";
+                }
+              ?>
 
               <div class="credits text-center">
                 <p>© Copyright 2023 - 2024 <strong><a href="https://www.theschon.com/">The Schon.</a> </strong>All Rights Reserved</p>

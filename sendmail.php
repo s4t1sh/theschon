@@ -8,11 +8,11 @@ $to = "vasettisatish@gmail.com";
 $first_name = $_POST['nameInp'];
 $email_from = $_POST['emailInp'];
 $telephone = $_POST['phoneInp'];
-$state = $_POST['stateInp'];
-$city = $_POST['cityInp'];
-$pincode = $_POST['pincodeInp'];
+// $state = $_POST['stateInp'];
+// $city = $_POST['cityInp'];
+// $pincode = $_POST['pincodeInp'];
 
-$insert_qry="INSERT INTO enquiries() VALUES(NULL,'$first_name','$email_from','$telephone','$state','$city','$pincode')";
+$insert_qry="INSERT INTO enquiries() VALUES(NULL,'$first_name','$email_from','$telephone')";
 mysqli_query($con,$insert_qry);
 
 $subject = "Thanks for contacting us";
@@ -28,16 +28,12 @@ $message = "
 <tr>
 <th>Name</th>
 <th>Telephone</th>
-<th>State</th>
-<th>City</th>
-<th>Pincode</th>
+<th>Email</th>
 </tr>
 <tr>
 <td>".$first_name."</td>
 <td>".$telephone."</td>
-<td>".$state."</td>
-<td>".$city."</td>
-<td>".$pincode."</td>
+<td>".$email_from."</td>
 </tr>
 </table>
 </body>

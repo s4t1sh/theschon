@@ -1,10 +1,26 @@
 <?php
     include 'db.php';
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    if ($_POST['username'] == 'admin' && $_POST['password'] == 'admin') {
-        $all_enquiries="SELECT * FROM enquiries";
-        $result=mysqli_query($con,$all_enquiries);
-        // $enquiry=mysqli_fetch_array($result);
+        if (mysqli_connect_errno()) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+
+        $username = mysqli_real_escape_string($con, $_POST['username']);
+        $password = mysqli_real_escape_string($con, $_POST['password']);
+        $hashed_password = md5($password);
+
+        $query = "SELECT * FROM login_details WHERE username='$username' AND pass='$hashed_password'";
+        $result = mysqli_query($con, $query);
+
+        if ($result && mysqli_num_rows($result) > 0) {
+            $all_enquiries="SELECT * FROM enquiries";
+            $result=mysqli_query($con,$all_enquiries);
+        } else {
+            header("Location: admin.php?message=Incorrect username or password");
+        }
+    }
+        mysqli_close($con);
 ?>
 
 <!DOCTYPE html>
@@ -34,13 +50,11 @@
 		<div class="col">
 			<img src="images/newimage/Group 412.png" alt="" class="window">
 		</div>
-        <div class="col pt-4">
-            <h3>ENQUIRY LIST</h3>
-        </div>
-        
 	</div>
    
-    
+ 
+    <h3 class="text-center">ENQUIRY LIST</h3>
+      
 
 <?php
     if (mysqli_num_rows($result) > 0) {
@@ -51,9 +65,6 @@
                     <th>First Name</th>
                     <th>Email</th>
                     <th>Telephone</th>
-                    <th>State</th>
-                    <th>City</th>
-                    <th>Pincode</th>
                 </tr>";
     
         // Output data of each row
@@ -63,24 +74,15 @@
                     <td>" . $enquiry['name'] . "</td>
                     <td>" . $enquiry['email'] . "</td>
                     <td>" . $enquiry['ph_no'] . "</td>
-                    <td>" . $enquiry['state'] . "</td>
-                    <td>" . $enquiry['city'] . "</td>
-                    <td>" . $enquiry['pincode'] . "</td>
                 </tr>";
         }
     
         echo "</table>";
     } else {
-        echo "No enquiries found.";
+        echo "<h3 class='text-center mt-5'>No enquiries found.</h3>";
     }
 ?>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
-
-<?php
-    } else {
-        header("Location: https://www.theschon.com/admin.html");
-    }
-?>
