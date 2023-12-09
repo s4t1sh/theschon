@@ -1078,8 +1078,8 @@
 
 
 	.about-title h3 {
-		/* font-family: 'Poppins', sans-serif; */
-		font-family: 'magazineNormal' !important;
+		font-family: 'Poppins', sans-serif;
+		/* font-family: 'magazineNormal' !important; */
 		font-size: 26px !important;
 		color: #fff;
 		background: -webkit-linear-gradient(#4E4E4E, #4E4E4E, #4E4E4E);

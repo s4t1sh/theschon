@@ -40,7 +40,7 @@
 }
 
 @font-face {
-   font-family: magazineNormal;
+   font-family: 'Poppins', sans-serif;
    src: url(/magazine/Magazine.ttf);
 }
 
@@ -5444,7 +5444,7 @@ table tr td p {
 
 .about-title h3 {
    /* font-family: 'Poppins', sans-serif; */
-   font-family: 'magazineNormal' !important;
+   font-family: 'Poppins', sans-serif;
    font-size: 32px;
    color: #fff;
    background: -webkit-linear-gradient(#4E4E4E, #4E4E4E, #4E4E4E);
@@ -5457,7 +5457,7 @@ table tr td p {
 
 .about-titlefive h3 {
    /* font-family: 'Poppins', sans-serif; */
-   font-family: 'magazineNormal';
+   font-family: 'Poppins', sans-serif;
    font-size: 25px;
    color: #fff;
    background: -webkit-linear-gradient(#4E4E4E, #4E4E4E, #4E4E4E);
