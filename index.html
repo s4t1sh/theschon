@@ -50,6 +50,75 @@
 				height: auto !important;
 			}
 		}
+
+		.modal {
+				display: none;
+				position: fixed;
+				z-index: 9999;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background-color: rgba(0,0,0,0.5);
+				opacity: 0; /* Set initial opacity to 0 */
+    			transition: opacity 0.8s ease;
+			}
+
+			.modal-content {
+				background-color: #fefefe;
+				margin: 70px auto;
+				padding: 20px;
+				border: 1px solid #888;
+				width: fit-content;
+			}
+
+			.close {
+				color: #aaa;
+				float: right;
+				font-size: 28px;
+				font-weight: bold;
+				cursor: pointer;
+			}
+
+			.form-container-bottom {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.form-container-bottom>div {
+			background-color: transparent;
+			border-radius: 10px;
+			padding: 20px;
+			margin-bottom: 50px;
+			margin-top: 25px;
+			box-shadow: 0 0 14px rgba(0, 0, 0, 0.5);
+		}
+
+		.form-container-bottom h5 {
+			font-size: 20px;
+			margin-bottom: 45px;
+			text-transform: uppercase;
+		}
+
+		.form-container-bottom form {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+		}
+
+		.form-container-bottom input {
+			padding: 8px 14px;
+			outline: none;
+			width: 500px;
+			display: block;
+			color: black;
+		}
+
 	</style>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -388,15 +457,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div class="container">
 				<div class="row">
 					<div class="about-title text-center">
-						<h3>Testimonials</h3>
+						<h3>Trusted by Thousands of Families</h3>
 						<!-- <h3><span>Build your</span> Dream Home <span>with us</span></h3> -->
 					</div>
-					<div class="row text-center" style="margin-top: 3rem;">
+					<div class="row text-center" style="margin-top: 8rem;">
 						<div class="col-md-4 mb-5 mb-md-0">
 							<div class="d-flex justify-content-center mb-4 rounded-circle overflow-hidden">
-								<img src="images/user-icon.png" width="150" height="150" style="border-radius: 100%;" />
+								<img src="images/test-1.png" width="150" height="150" style="border-radius: 100%;" />
 							</div>
-							<h5 class="mb-3">Rahul</h5>
+							<h5 class="mb-3">Rahul Reghunath</h5>
 							<p class="px-xl-3">Schon transformed our house into a masterpiece! The attention to detail
 								in every custom-designed window and door is unmatched. Our home now exudes both luxury
 								and practicality—exactly what we were looking for. Thank you, Schon, for making our
@@ -405,9 +474,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</div>
 						<div class="col-md-4 mb-5 mb-md-0">
 							<div class="d-flex justify-content-center mb-4">
-								<img src="images/user-icon.png" style="border-radius: 100%;" width="150" height="150" />
+								<img src="images/test-2.png" style="border-radius: 100%;" width="150" height="150" />
 							</div>
-							<h5 class="mb-3">Sourabh</h5>
+							<h5 class="mb-3">Swati Iyer</h5>
 							<p class="px-xl-3">Choosing Schon was the best decision we made for our home. The
 								personalized, engineered solutions they provided for our kitchen and wardrobe exceeded
 								our expectations. The team worked closely with us, ensuring that every aspect reflected
@@ -416,9 +485,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</div>
 						<div class="col-md-4 mb-0">
 							<div class="d-flex justify-content-center mb-4">
-								<img src="images/user-icon.png" style="border-radius: 100%;" width="150" height="150" />
+								<img src="images/test-3.png" style="border-radius: 100%;" width="150" height="150" />
 							</div>
-							<h5 class="mb-3">Somesh</h5>
+							<h5 class="mb-3">Nagarjuna Bhandari</h5>
 							<p class="px-xl-3">Schon doesn't just transform spaces; they perfect them. Our experience
 								with Schon was exceptional—from concept to execution, they prioritized our vision. Our
 								home now stands as a testament to their brand philosophy: personalized, elegant, and
@@ -427,10 +496,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</div>
 					</div>
 				</div>
+				
+					<div class="container text-center" >
+							<button class="button button1" id="enquireButton" style="margin-top: 3rem;">ENQUIRE NOW</button>
+					</div>
+			</div>
+
+			<div class="modal" id="myModal">
+				<div class="modal-content">
+					<span class="close" id="closeModal">&times;</span>
+					<div class="form-container-bottom" >
+						<div style="box-shadow: none !important; ">
+							<h5>Enquire Now</h5>
+							<form method="POST" action="sendmail.php">
+								<input type="text" id="nameInp" name="nameInp" required placeholder="Name">
+								<input type="email" id="emailInp" name="emailInp" required placeholder="Email">
+								<input type="number" id="phoneInp" name="phoneInp" required placeholder="Phone number">
+								<!-- <input type="text" id="stateInp" name="stateInp" required placeholder="State">
+								<input type="text" id="cityInp" name="cityInp" required placeholder="City">
+								<input type="number" id="pincodeInp" name="pincodeInp" required placeholder="Pincode"> -->
+								<input type="submit" value="SUBMIT"
+									style="background-color: #7D7D7D; outline: none; color: white; border: none; font-weight: 500;">
+							</form>
+						</div>
+					</div>
+				</div>
 			</div>
 
 
-			<footer id="footer" class="footer">
+			<footer id="footer" class="footer" style="margin-top: 3rem;">
 				<div class="footer-main">
 					<div class="container">
 						<div class="row">
@@ -559,6 +653,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				});
 
 			</script>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+	var enquireButton = document.getElementById('enquireButton');
+	
+	var modal = document.getElementById('myModal');
+	var closeModal = document.getElementById('closeModal');
+
+	enquireButton.addEventListener('click', function () {
+		modal.style.display = 'block';
+
+		// Triggering reflow to enable the animation
+		void modal.offsetWidth;
+
+		modal.style.opacity = '1'; // Set opacity to 1 for fade-in effect
+	});
+
+	closeModal.addEventListener('click', function () {
+		modal.style.opacity = '0'; // Set opacity to 0 for fade-out effect
+
+		// Hide the modal after the animation completes
+		setTimeout(function () {
+			modal.style.display = 'none';
+		}, 300); // Adjust the timeout to match the transition duration
+	});
+
+	window.addEventListener('click', function (event) {
+		if (event.target === modal) {
+			modal.style.opacity = '0'; // Set opacity to 0 for fade-out effect
+
+			// Hide the modal after the animation completes
+			setTimeout(function () {
+				modal.style.display = 'none';
+			}, 300); // Adjust the timeout to match the transition duration
+		}
+	});
+});
+
+</script>
 		</div><!-- Body inner end -->
 </body>
 
