@@ -2,8 +2,8 @@
 <?php
 
 include 'db.php';
-// $to = "contact@theschon.com";
-$to = "vasettisatish@gmail.com";
+$to = "contact@theschon.com";
+// $to = "vasettisatish@gmail.com";
 
 $first_name = $_POST['nameInp'];
 $email_from = $_POST['emailInp'];
