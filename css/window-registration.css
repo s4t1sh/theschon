@@ -1,0 +1,49 @@
+.benifits-main-container{
+  margin: 60px  0;
+}
+
+.benifits-main-div {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.benifit-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.benifit-card > img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.benifit-card > p {
+  /* font-size: 13px; */
+  text-align: center;
+  margin-top: 5px;
+}
+
+.excellent-service-div {
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.excellent-service-div > p {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .benifits-main-div {
+    grid-template-columns: 1fr; 
+  }
+}
